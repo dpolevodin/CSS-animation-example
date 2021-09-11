@@ -118,6 +118,12 @@ body {
     background-color: rgba(212, 158, 237, 0.3);
   }
 
+  .console__buttons:disabled {
+    border-color: #575757;
+    color: #575757;
+  }
+  
+
 @keyframes square-animation-rotate {
     40% {
         margin-right: 30px;
