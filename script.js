@@ -4,5 +4,10 @@ const animationClass = {
         for (item of squares) {
             item.classList.add(`square__item-animation-${animationType.toLowerCase()}`)
         }
+        setTimeout(() => {
+            for (item of squares) {
+                item.classList.remove(`square__item-animation-${animationType.toLowerCase()}`)
+            }
+        }, 5000);
     }
 }
