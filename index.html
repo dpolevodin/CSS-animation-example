@@ -18,23 +18,24 @@
 
         <div class="container-wrapper"></div>
         <div class="square">
-            <div class="square__item"></div>
-            <div class="square__item"></div>
-            <div class="square__item"></div>
-            <div class="square__item"></div>
-            <div class="square__item"></div>
-            <div class="square__item"></div>
-            <div class="square__item"></div>
-            <div class="square__item"></div>
-            <div class="square__item"></div>
+            <div class="square__item square__item_first-row-first-elem"></div>
+            <div class="square__item square__item_first-row-sec-elem"></div>
+            <div class="square__item square__item_first-row-third-elem"></div>
+            <div class="square__item square__item_sec-row-first-elem"></div>
+            <div class="square__item square__item_sec-row-sec-elem"></div>
+            <div class="square__item square__item_sec-row-third-elem"></div>
+            <div class="square__item square__item_third-row-first-elem"></div>
+            <div class="square__item square__item_third-row-sec-elem"></div>
+            <div class="square__item square__item_third-row-third-elem"></div>
         </div>
         <div class="console">
-            <button class="console__buttons">Example 1</button>
-            <button class="console__buttons">Example 2</button>
+            <button class="console__buttons" onclick="animationClass.changeClass(this.innerHTML)">Rotate</button>
+            <button class="console__buttons" onclick="animationClass.changeClass(this.innerHTML)">Scale</button>
             <button class="console__buttons">Example 3</button>
             <button class="console__buttons">Example 4</button>
             <button class="console__buttons">Example 5</button>
         </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>

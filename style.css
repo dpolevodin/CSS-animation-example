@@ -9,7 +9,7 @@ body {
     flex-flow: row wrap;
     justify-content: space-around;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 2rem;
 }
 
 .header {
@@ -22,7 +22,7 @@ body {
 .header__title {
     display: block;
     color: #FFF;
-    margin-bottom: 100px;
+    margin-bottom: 3rem;
 }
 
 .square {
@@ -32,18 +32,59 @@ body {
     align-items: center;
     flex-wrap: wrap;
     width: 700px;
-    cursor: pointer;
 }
 
 .square__item {
     width: 200px;
     height: 200px;
     background-color: white;
+    background: url('./bg.png') no-repeat;
 }
 
-.square:hover .square__item {
-    animation: square-animation 5s infinite; 
+.square__item_first-row-first-elem {
+    background-position: 0px 0px;
 }
+
+.square__item_first-row-sec-elem {
+    background-position: -230px 0px;
+}
+
+.square__item_first-row-third-elem {
+    background-position: -425px  0px;
+}
+
+.square__item_sec-row-first-elem {
+    background-position: 0px -195px;
+}
+
+.square__item_sec-row-sec-elem {
+    background-position: -200px -195px;
+}
+
+.square__item_sec-row-third-elem {
+    background-position: -425px -195px;
+}
+
+.square__item_third-row-first-elem {
+    background-position: 0px -416px;
+}
+
+.square__item_third-row-sec-elem {
+    background-position: -200px -416px;
+}
+
+.square__item_third-row-third-elem {
+    background-position: -425px -416px;
+}
+
+.square__item-animation-rotate {
+    animation: square-animation-rotate 5s 1; 
+}
+
+.square__item-animation-scale {
+    animation: square-animation-scale 5s 1; 
+}
+
 
 .console {
     display: flex;
@@ -68,10 +109,58 @@ body {
     margin-bottom: 0;
 }
 
-@keyframes square-animation {
-    100% {
+.console__buttons:hover {
+    border-color: #d49eed;
+    box-shadow: 0 0 1rem #d49eed;
+  }
+  
+  .console__buttons:focus {
+    background-color: rgba(212, 158, 237, 0.3);
+  }
+
+@keyframes square-animation-rotate {
+    40% {
+        margin-right: 30px;
+        margin-bottom: 30px;
+        transform: rotate(0deg);
+    }
+
+    41% {
+        transform: rotate(0deg);
+    }
+
+    80% {
         margin-right: 30px;
         margin-bottom: 30px;
     }
+
+    100% {
+        transform: rotate(360deg);
+        margin-right: 0;
+        margin-bottom: 0;
+    }
 }
+
+@keyframes square-animation-scale {
+    40% {
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+    41% {
+        transform: scale(0.3, 0.3);
+    }
+    80% {
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    95% {
+        transform: scale(1, 1);
+    }
+    100% {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+}
+
 
