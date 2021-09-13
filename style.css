@@ -77,12 +77,22 @@ body {
     background-position: -425px -416px;
 }
 
+
+/* Animations classes */
 .square__item-animation-rotate {
     animation: square-animation-rotate 5s 1; 
 }
 
 .square__item-animation-scale {
     animation: square-animation-scale 5s 1; 
+}
+
+.square__item-animation-pulse {
+    animation: square-animation-pulse 5s 1; 
+}
+
+.square__item-animation-flicker {
+    animation: square-animation-flicker 5s 1; 
 }
 
 
@@ -153,7 +163,8 @@ body {
         margin-bottom: 30px;
     }
     41% {
-        transform: scale(0.3, 0.3);
+        transform: scale(0.4, 0.4);
+        
     }
     80% {
         margin-right: 30px;
@@ -170,3 +181,70 @@ body {
 }
 
 
+@keyframes square-animation-pulse {
+      10% {
+        transform: scale(0.8, 0.8)
+      }
+      20% {
+        transform: scale(1, 1)
+      }
+      30% {
+        transform: scale(0.8, 0.8)
+      }
+      40% {
+        transform: scale(1, 1)
+      }
+      50% {
+        transform: scale(0.8, 0.8)
+      }
+      60% {
+        transform: scale(1, 1)
+      }
+      70% {
+        transform: scale(0.8, 0.8)
+      }
+      80% {
+        transform: scale(1, 1)
+      }
+      90% {
+        transform: scale(0.8, 0.8)
+      }
+      100% {
+        transform: scale(1, 1)
+      }
+    }
+
+    @keyframes square-animation-flicker {
+        10% {
+            opacity: 0;
+          }
+          20% {
+            opacity: 1;
+          }
+          30% {
+            opacity: 0;
+          }
+          40% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0;
+            margin: 15px;
+            transform: rotate(30deg);
+          }
+          60% {
+            opacity: 1;
+          }
+          70% {
+            opacity: 0;
+          }
+          80% {
+            opacity: 1;
+          }
+          90% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+    }
