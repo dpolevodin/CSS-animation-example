@@ -80,7 +80,7 @@ body {
 
 /* Animations classes */
 .square__item-animation-rotate {
-    animation: square-animation-rotate 5s 1; 
+    animation: square-animation-rotate 5s 1;
 }
 
 .square__item-animation-scale {
@@ -93,6 +93,10 @@ body {
 
 .square__item-animation-flicker {
     animation: square-animation-flicker 5s 1; 
+}
+
+.square__item-animation-transform {
+    animation: square-animation-transform 5s 1; 
 }
 
 
@@ -243,6 +247,20 @@ body {
           }
           90% {
             opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+    }
+
+    @keyframes square-animation-transform {
+          40% {
+            margin: 15px;
+            border-radius: 50%;
+          }
+          60% {
+            margin: 15px;
+            border-radius: 50%;
           }
           100% {
             opacity: 1;
